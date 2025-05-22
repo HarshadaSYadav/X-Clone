@@ -28,7 +28,9 @@ const __dirname = path.resolve();
 app.use(
 	cors({
 		origin: "https://x-clone-ruddy.vercel.app",
-		credentials: true, // allow cookies and credentials
+		credentials: true, 
+		 methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]// allow cookies and credentials
 	})
 );
 
