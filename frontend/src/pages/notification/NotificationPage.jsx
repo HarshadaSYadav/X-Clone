@@ -27,7 +27,7 @@ const NotificationPage = () => {
 	const { mutate: deleteNotifications } = useMutation({
 		mutationFn: async () => {
 			try {
-				const res = await fetch("/api/notifications", {
+				const res = await fetch("https://x-clone-backend-tau.vercel.app/api/notifications", {
 					method: "DELETE",
 				});
 				const data = await res.json();
