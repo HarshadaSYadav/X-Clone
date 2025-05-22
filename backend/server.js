@@ -17,7 +17,7 @@ const app = express()
 connectDB()
 
 app.use(cors({
-  origin: 'https://x-clone-with-mern.vercel.app', // your frontend URL
+  origin: 'https://x-clone-ruddy.vercel.app', // your frontend URL
   credentials: true
 }))
 
