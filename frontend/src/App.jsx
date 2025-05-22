@@ -27,7 +27,7 @@ function App() {
 		queryKey: ["authUser"],
 		queryFn: async () => {
 			try {
-				const res = await fetch("/api/auth/me");
+				const res = await fetch("https://x-clone-backend-tau.vercel.app/api/auth/me");
 				const data = await res.json();
 				if (data.error) return null;
 				if (!res.ok) {
