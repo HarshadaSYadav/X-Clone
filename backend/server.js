@@ -17,7 +17,7 @@ const app = express()
 connectDB()
 
 const corsOptions = {
-  origin:'https://registration-frontend-liart.vercel.app',// Allow the frontend domain
+  origin:'https://x-clone-ruddy.vercel.app',// Allow the frontend domain
   methods: 'GET,POST,PUT,DELETE,OPTIONS', // Allowed methods
   credentials: true, // Allow credentials (cookies, authorization headers, etc.)
   };
