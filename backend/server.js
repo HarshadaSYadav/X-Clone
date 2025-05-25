@@ -9,7 +9,6 @@ import authRoutes from './routes/auth.route.js'
 import userRoutes from './routes/user.route.js'
 import postRoutes from './routes/post.route.js'
 import notificationRoutes from './routes/notification.route.js'
-import connectDB from './db/connectDB.js'
 
 dotenv.config()
 const app = express()
