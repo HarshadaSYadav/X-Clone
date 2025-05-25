@@ -16,13 +16,22 @@ const app = express()
 
 connectDB()
 
-app.use(cors({
-  origin: 'https://x-clone-ruddy.vercel.app', // your frontend URL
-  credentials: true
-}))
+const corsOptions = {
+  origin:'https://registration-frontend-liart.vercel.app',// Allow the frontend domain
+  methods: 'GET,POST,PUT,DELETE,OPTIONS', // Allowed methods
+  credentials: true, // Allow credentials (cookies, authorization headers, etc.)
+  };
 
+
+app.use(cors(corsOptions));
 app.use(express.json())
 app.use(cookieParser())
+
+app.use((req, res, next) => {
+  console.log("CORS Headers:");
+  console.log(req.headers);
+  next();
+});
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
