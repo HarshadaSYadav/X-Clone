@@ -14,7 +14,7 @@ import connectMongoDB from './db/connectMongoDB.js'
 dotenv.config()
 const app = express()
 
-connectDB()
+connectMongoDB()
 
 const corsOptions = {
   origin:'https://x-clone-ruddy.vercel.app',// Allow the frontend domain
